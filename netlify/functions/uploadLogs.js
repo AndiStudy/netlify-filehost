@@ -15,6 +15,8 @@ exports.handler = async (event) => {
 
     // Save logs to a file on the server
     fs.writeFileSync(filePath, logs, 'utf8');
+	
+	console.log('Received logs:', logs);
 
     return {
       statusCode: 200,
